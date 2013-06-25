@@ -1,0 +1,19 @@
+{
+  "name": "gruntfile-sass",
+  "version": "1.0.0",
+  "description": "The base Gruntfile I'm using in my ASP.NET projects to watch my SCSS files",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-recess": "~0.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonpyk/gruntfile-sass.git"
+  },
+  "author": "Clément Bourgeois <moonpyk@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
