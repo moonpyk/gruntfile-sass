@@ -28,13 +28,12 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['./*.scss', './**/*.scss'],
-                tasks: ['sass', 'recess']
+                tasks: ['resass']
             }
         }
     });
 
-    grunt.registerTask('none', '', function () {
-    });
+    grunt.registerTask('resass', ['sass', 'recess']);
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-recess');
@@ -42,5 +41,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
 
     // Default task.
-    grunt.registerTask('default', ['sass', 'recess', 'watch']);
+    grunt.registerTask('default', [ 'watch']);
 };
