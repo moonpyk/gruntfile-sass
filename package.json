@@ -15,5 +15,6 @@
   },
   "author": "Clément Bourgeois <moonpyk@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "private": true
 }
