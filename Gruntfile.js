@@ -3,10 +3,11 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         // Task configuration.
+        cssRoot: '.',
         sass: {
             dev: {
                 files: {
-                    'Site.css': 'Site.scss'
+                    '<%= cssRoot %>/Site.css': '<%= cssRoot %>/Site.scss'
                 },
                 options: {
                     style: 'expanded ', // compact, compressed, nested or expanded
@@ -20,7 +21,7 @@ module.exports = function (grunt) {
                     compile: true
                 },
                 files: {
-                    'Site.css': 'Site.css'
+                    '<%= cssRoot %>/Site.css': '<%= cssRoot %>/Site.css'
                 }
             },
             dist: {
@@ -29,13 +30,13 @@ module.exports = function (grunt) {
                     compress: true
                 },
                 files: {
-                    'Site.min.css': 'Site.css'
+                    '<%= cssRoot %>/Site.min.css': '<%= cssRoot %>/Site.css'
                 }
             }
         },
         watch: {
             sass: {
-                files: ['./*.scss', './**/*.scss'],
+                files: ['<%= cssRoot %>/*.scss', '<%= cssRoot %>/**/*.scss'],
                 tasks: ['resass:dev']
             }
         }
